@@ -15,5 +15,7 @@ jobs:
     - uses: actions/checkout@v2
       
     - name: Download MergeCom
-      uses : curl http://estore.merge.com/mergecom3/products/v5.11/mc3_w64_5110_008-91208.zip --output mc3_w64.zip
+      working-directory: SCU files
+      shell: cmd
+      run: curl http://estore.merge.com/mergecom3/products/v5.11/mc3_w64_5110_008-91208.zip --output mc3_w64.zip
              unzip mc3_w64.zip
