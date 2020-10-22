@@ -14,5 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       
-    - name: Testing SCU
-      uses : http://estore.merge.com/mergecom3/download-thanks.aspx?productId=b1534ecc-1e57-480c-b5ca-5681b30e996f
+    - name: Download MergeCom
+      uses : curl http://estore.merge.com/mergecom3/products/v5.11/mc3_w64_5110_008-91208.zip --output mc3_w64.zip
+             unzip mc3_w64.zip
